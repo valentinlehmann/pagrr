@@ -19,10 +19,6 @@ targets:
     scheme: {}
     dependencies:
       - package: Firebase
-        product: FirebaseAnalytics
-      - package: Firebase
-        product: FirebaseAnalyticsCore
-      - package: Firebase
         product: FirebaseAppCheck
       - package: Firebase
         product: FirebaseAuth
