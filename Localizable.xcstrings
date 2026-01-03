@@ -1,0 +1,442 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ (You)" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ (Du)"
+          }
+        }
+      }
+    },
+    "About the channel" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über diesen Kanal"
+          }
+        }
+      }
+    },
+    "Add Owner" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besitzer hinzufügen"
+          }
+        }
+      }
+    },
+    "API Key" : {
+      "comment" : "Label for the channel API key",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-Schlüssel"
+          }
+        }
+      }
+    },
+    "Are you sure you want to delete your account?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bist du dir sicher, dass du deinen Account löschen willst?"
+          }
+        }
+      }
+    },
+    "Channels" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanäle"
+          }
+        }
+      }
+    },
+    "Channels marked with an exclamatin mark (!) will be deleted permanently, as you are the only owner." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanäle, die mit einem Ausrufezeichen (!) markiert sind, werden permanent gelöscht, weil du der einzige Besitzer bist."
+          }
+        }
+      }
+    },
+    "Copy API Key" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-Schlüssel kopieren"
+          }
+        }
+      }
+    },
+    "Copy cURL Command" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "cURL-Befehl kopieren"
+          }
+        }
+      }
+    },
+    "Copy ID" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ID kopieren"
+          }
+        }
+      }
+    },
+    "Created At" : {
+      "comment" : "Label for the channel creation date",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstellt am"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        }
+      }
+    },
+    "Delete Account" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account löschen"
+          }
+        }
+      }
+    },
+    "Delete Channel" : {
+      "comment" : "Button to delete the channel",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanal löschen"
+          }
+        }
+      }
+    },
+    "Edit Name" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name editieren"
+          }
+        }
+      }
+    },
+    "Get push notifications from your services, without the hassle." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekomme Push-Nachrichten von deinen Services, ohne Kopfschmerzen."
+          }
+        }
+      }
+    },
+    "Hide API Key" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-Schlüssel verstecken"
+          }
+        }
+      }
+    },
+    "I changed my mind" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich habe es mir anders überlegt"
+          }
+        }
+      }
+    },
+    "ID" : {
+      "comment" : "Label for the channel ID",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ID"
+          }
+        }
+      }
+    },
+    "Info" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        }
+      }
+    },
+    "Manage channel" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanal verwalten"
+          }
+        }
+      }
+    },
+    "Messages" : {
+      "comment" : "Section header for the list of messages in a channel",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nachrichten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Messages"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "comment" : "Label for the channel name",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "New channel" : {
+      "comment" : "Name of a newly created channel",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neuer Kanal"
+          }
+        }
+      }
+    },
+    "No channels available. \nCreate one by tapping the button in the bottom right corner." : {
+      "comment" : "Indicates that there are no channels",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Kanäle vorhanden. \nErstelle einen Kanal, indem du auf den Button in der rechten unteren Ecke tippst."
+          }
+        }
+      }
+    },
+    "No messages available." : {
+      "comment" : "Indicates that there are no messages in the channel",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Nachrichten vorhanden."
+          }
+        }
+      }
+    },
+    "No user logged in" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein Benutzer angemeldet"
+          }
+        }
+      }
+    },
+    "Owners" : {
+      "comment" : "Label for the channel owners",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Besitzer"
+          }
+        }
+      }
+    },
+    "Pagrr" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pagrr"
+          }
+        }
+      }
+    },
+    "Reauthenticate and Delete My Account" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Authentifizieren und Account löschen"
+          }
+        }
+      }
+    },
+    "Remove" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entfernen"
+          }
+        }
+      }
+    },
+    "Reset API Key" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-Schlüssel zurücksetzen"
+          }
+        }
+      }
+    },
+    "Show API Key" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-Schlüssel anzeigen"
+          }
+        }
+      }
+    },
+    "Sign In" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anmelden"
+          }
+        }
+      }
+    },
+    "Sign in with Apple" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Apple anmelden"
+          }
+        }
+      }
+    },
+    "Sign Out" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abmelden"
+          }
+        }
+      }
+    },
+    "Test description" : {
+      "comment" : "Description of the copied configuration",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test-Beschreibung"
+          }
+        }
+      }
+    },
+    "Test title" : {
+      "comment" : "Title of the copied configuration",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Test-Titel"
+          }
+        }
+      }
+    },
+    "Urgent" : {
+      "comment" : "Indicates that the message is urgent",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dringlich"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Urgent"
+          }
+        }
+      }
+    },
+    "Welcome to Pagrr!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willkommen in Pagrr!"
+          }
+        }
+      }
+    },
+    "You have no channels." : {
+      "comment" : "Indicates that there are no channels in the Account Deletion View",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast keine Kanäle."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}
