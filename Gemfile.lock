@@ -228,7 +228,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  abbrev
   fastlane
+  rexml (~> 3.4)
 
 BUNDLED WITH
    2.6.9
