@@ -14,6 +14,8 @@ targets:
       iOS: 26.0
     sources: 
       - path: Pagrr
+      - path: Localizable.xcstrings
+        buildPhase: resources
       - path: AppIcon.icon
         buildPhase: resources
     scheme: {}
