@@ -11,7 +11,6 @@ jobs:
       - run: brew install xcodegen
       - run: xcodegen generate
       - run: bundle update
-      - run: bundle exec fastlane add_plugin setup_ci
       - run: bundle exec fastlane beta
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
