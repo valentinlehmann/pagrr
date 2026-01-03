@@ -60,10 +60,10 @@ Package.pins
 Package.resolved
 
 # Ignore projectfiles (only if xcodegen is used)
-*.xcodeproj
-*.xcworkspace
-*.xcscheme
-*.pbxproj
+**.xcodeproj
+**.xcworkspace
+**.xcscheme
+**.pbxproj
 
 .swift-openapi-generator
 
