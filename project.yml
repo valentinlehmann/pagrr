@@ -34,6 +34,10 @@ targets:
       base:
         TARGETED_DEVICE_FAMILY: 1
         PRODUCT_NAME: Pagrr
+        MARKETING_VERSION: 1.0.0
+        CURRENT_PROJECT_VERSION: 2
+        INFOPLIST_KEY_CFBundleDisplayName: Pagrr
+        INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.developer-tools"
         INFOPLIST_FILE: Pagrr/Info.plist
         CODE_SIGN_ENTITLEMENTS: Pagrr/Entitlements.entitlements
         PRODUCT_BUNDLE_IDENTIFIER: de.valentinlehmann.pagrr
@@ -42,6 +46,7 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS: YES
         PROVISIONING_PROFILE_SPECIFIER: ""
+        IPHONEOS_DEPLOYMENT_TARGET: 26.0
         CODE_SIGN_IDENTITY: ""
       configs:
         Debug:
