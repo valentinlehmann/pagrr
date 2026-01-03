@@ -1,0 +1,16 @@
+name: build-ios-app
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: xcodegen generate
+      - run: bundle update
+      - run: bundle exec fastlane beta
+        env:
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+	        MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_PAT }}
