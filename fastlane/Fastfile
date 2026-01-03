@@ -39,3 +39,7 @@ lane :load_api_key do
     is_key_content_base64: true
   )
 end
+
+lane :setup_ci do
+  setup_ci
+end
