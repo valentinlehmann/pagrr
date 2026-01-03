@@ -13,7 +13,7 @@ jobs:
           xcode-version: latest-stable
       - run: brew install xcodegen
       - run: xcodegen generate
-      - run: bundle update
+      - run: bundle install
       - run: bundle exec fastlane beta
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
