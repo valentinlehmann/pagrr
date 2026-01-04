@@ -24,9 +24,9 @@ struct ChannelDetailView: View {
                         VStack(alignment: .leading) {
                             HStack(alignment: .top) {
                                 VStack(alignment: .leading) {
-                                    Text(message.title)
+                                    Text(.init(message.title))
                                         .font(.headline)
-                                    Text(message.description)
+                                    Text(.init(message.description))
                                         .font(.subheadline)
                                 }
                                 Spacer()
