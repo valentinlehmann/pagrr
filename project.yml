@@ -46,6 +46,8 @@ targets:
         PROVISIONING_PROFILE_SPECIFIER: ""
         IPHONEOS_DEPLOYMENT_TARGET: 26.0
         CODE_SIGN_IDENTITY: ""
+        SWIFT_EMIT_LOC_STRINGS: YES
+        LOCALIZATION_PREFERS_STRING_CATALOGS: YES
       configs:
         Debug:
           "CODE_SIGN_IDENTITY[sdk=iphoneos*]": "iPhone Developer"

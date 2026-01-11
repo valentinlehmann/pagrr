@@ -144,16 +144,6 @@
         }
       }
     },
-    "Edit Name" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Name editieren"
-          }
-        }
-      }
-    },
     "Get push notifications from your services, without the hassle." : {
       "localizations" : {
         "de" : {
