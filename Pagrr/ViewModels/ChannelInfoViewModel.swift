@@ -17,6 +17,7 @@ class ChannelInfoViewModel {
     var newOwnerId = ""
     var newOwnerAlertPresented = false
     private var onNameUpdated: ((String) -> Void)?
+    var copySuccessAlertPresented = false
     
     init(channelId: String, onNameUpdated: ((String) -> Void)? = nil) {
         self.channelId = channelId
@@ -158,5 +159,7 @@ class ChannelInfoViewModel {
                 "description": "\(String(localized: "Test description", comment: "Description of the copied configuration"))"
             }'
             """
+        
+        copySuccessAlertPresented = true
     }
 }

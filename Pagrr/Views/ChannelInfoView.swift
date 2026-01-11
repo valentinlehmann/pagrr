@@ -144,6 +144,11 @@ struct ChannelInfoView: View {
                 } label: {
                     Label("Copy cURL Command", systemImage: "apple.terminal")
                 }
+                .alert("Copied!", isPresented: $viewModel.copySuccessAlertPresented) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text("The cURL command has been copied to your clipboard.")
+                }
                 Button(role: .destructive) {
                     Task {
                         viewModel.deleteChannel()

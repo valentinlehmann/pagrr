@@ -82,6 +82,16 @@
         }
       }
     },
+    "Copied!" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiert!"
+          }
+        }
+      }
+    },
     "Copy API Key" : {
       "localizations" : {
         "de" : {
@@ -296,6 +306,16 @@
         }
       }
     },
+    "OK" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
     "Owners" : {
       "comment" : "Label for the channel owners",
       "localizations" : {
@@ -405,6 +425,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Test-Titel"
+          }
+        }
+      }
+    },
+    "The cURL command has been copied to your clipboard." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der cURL-Befehl wurde in deine Zwischenablage kopiert."
           }
         }
       }
