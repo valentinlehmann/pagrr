@@ -119,13 +119,23 @@ struct ChannelInfoView: View {
                     }
                 }
                 Button {
-                    Task {
-                        if let newOwnerId = await viewModel.promptForNewOwnerId() {
-                            viewModel.addOwner(newOwnerId)
-                        }
-                    }
+                    viewModel.newOwnerAlertPresented = true
                 } label: {
                     Label("Add Owner", systemImage: "plus.circle")
+                }
+                .alert("Add Owner", isPresented: $viewModel.newOwnerAlertPresented) {
+                    TextField("User ID", text: $viewModel.newOwnerId)
+                    Button("Add Owner", action: {
+                        Task {
+                            viewModel.addOwner(viewModel.newOwnerId)
+                            viewModel.newOwnerId = ""
+                        }
+                    })
+                    Button("Cancel", role: .cancel, action: {
+                        viewModel.newOwnerId = ""
+                    })
+                } message: {
+                    Text("Enter the user ID of the new owner.")
                 }
             }
             Section("Manage channel") {

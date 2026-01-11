@@ -52,6 +52,16 @@
         }
       }
     },
+    "Cancel" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        }
+      }
+    },
     "Channels" : {
       "localizations" : {
         "de" : {
@@ -140,6 +150,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kanal löschen"
+          }
+        }
+      }
+    },
+    "Enter the user ID of the new owner." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebe die Benutzer-ID des anderen Besitzers ein."
           }
         }
       }
@@ -402,6 +422,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Urgent"
+          }
+        }
+      }
+    },
+    "User ID" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzer-ID"
           }
         }
       }
