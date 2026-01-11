@@ -10,12 +10,11 @@ import FirebaseAuth
 
 struct ChannelInfoView: View {
     @State private var viewModel: ChannelInfoViewModel
-    @FocusState private var isNameFieldFocused: Bool
     @Environment(\.dismiss) private var dismiss
     private var onChannelDeleted: (() -> Void)?
     
-    init(channel: Channel, onChannelDeleted: (() -> Void)? = nil) {
-        self.viewModel = ChannelInfoViewModel(channelId: channel.id)
+    init(channel: Channel, onChannelDeleted: (() -> Void)? = nil, onNameUpdated: ((String) -> Void)? = nil) {
+        self.viewModel = ChannelInfoViewModel(channelId: channel.id, onNameUpdated: onNameUpdated)
         self.onChannelDeleted = onChannelDeleted
     }
     
@@ -26,25 +25,12 @@ struct ChannelInfoView: View {
                     Text("Name", comment: "Label for the channel name")
                         .font(.caption)
                         .foregroundColor(.gray)
-                    if viewModel.nameEditMode {
-                        TextField("Name",
-                                  text: $viewModel.editedName,
-                                  onCommit: {
-                            viewModel.updateChannelName()
-                        })
-                        .submitLabel(.done)
-                        .focused($isNameFieldFocused)
-                    } else {
-                        Text(viewModel.channel.name)
-                            .font(.body)
-                            .contextMenu {
-                                Button {
-                                    viewModel.nameEditMode = true
-                                } label: {
-                                    Label("Edit Name", systemImage: "pencil")
-                                }
-                            }
-                    }
+                    TextField("Name",
+                              text: $viewModel.editedName,
+                              onCommit: {
+                        viewModel.updateChannelName()
+                    })
+                    .submitLabel(.done)
                 }
                 VStack(alignment: .leading) {
                     Text("ID", comment: "Label for the channel ID")
@@ -163,9 +149,6 @@ struct ChannelInfoView: View {
         }
         .navigationTitle("Info")
         .navigationBarTitleDisplayMode(.inline)
-        .onChange(of: viewModel.nameEditMode) { oldValue, newValue in
-            isNameFieldFocused = newValue
-        }
         .onDisappear {
             viewModel.showApiKey = false
         }

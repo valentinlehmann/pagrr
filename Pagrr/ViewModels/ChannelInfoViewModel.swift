@@ -13,13 +13,16 @@ class ChannelInfoViewModel {
     let channelId: String
     var channel: Channel
     var showApiKey = false
-    var nameEditMode = false
     var editedName = ""
+    var newOwnerId = ""
+    var newOwnerAlertPresented = false
+    private var onNameUpdated: ((String) -> Void)?
     
-    init(channelId: String) {
+    init(channelId: String, onNameUpdated: ((String) -> Void)? = nil) {
         self.channelId = channelId
         self.channel = Channel(id: channelId, name: "", createdAt: Date(), owners: [], apiKey: "")
         self.fetchChannel()
+        self.onNameUpdated = onNameUpdated
     }
     
     func fetchChannel() {
@@ -37,8 +40,6 @@ class ChannelInfoViewModel {
     }
     
     func updateChannelName() {
-        nameEditMode = false
-        
         if editedName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             print("Channel name cannot be empty")
             editedName = channel.name
@@ -52,6 +53,8 @@ class ChannelInfoViewModel {
         Task { @MainActor in
             self.channel.name = self.editedName
         }
+        
+        onNameUpdated?(editedName)
         
         DatabaseService.shared.db.collection("channels").document(channel.id).updateData([
             "name": editedName

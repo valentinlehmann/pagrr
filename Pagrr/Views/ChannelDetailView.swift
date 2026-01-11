@@ -73,11 +73,13 @@ struct ChannelDetailView: View {
         .toolbar {
             ToolbarItem() {
                 NavigationLink {
-                    ChannelInfoView(channel: viewModel.channel) {
+                    ChannelInfoView(channel: viewModel.channel, onChannelDeleted: {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             dismiss()
                         }
-                    }
+                    }, onNameUpdated: { newName in
+                        viewModel.channel.name = newName
+                    })
                 } label: {
                     Image(systemName: "info.circle")
                 }
