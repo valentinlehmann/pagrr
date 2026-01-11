@@ -132,23 +132,6 @@ class ChannelInfoViewModel {
         }
     }
     
-    func promptForNewOwnerId() async -> String? {
-        await withCheckedContinuation { continuation in
-            let alert = UIAlertController(title: "Add Owner", message: "Enter the user ID of the new owner:", preferredStyle: .alert)
-            alert.addTextField { textField in
-                textField.placeholder = "User ID"
-            }
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in
-                continuation.resume(returning: nil)
-            })
-            alert.addAction(UIAlertAction(title: "Add", style: .default) { _ in
-                let userId = alert.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-                continuation.resume(returning: userId?.isEmpty == false ? userId : nil)
-            })
-            UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: nil)
-        }
-    }
-    
     func copyConfiguration() {
         UIPasteboard.general.string = """
             curl --location 'https://createnotification-m3eh43zzpq-ew.a.run.app/?channelId=\(channel.id)' \\
