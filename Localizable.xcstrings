@@ -215,6 +215,16 @@
         }
       }
     },
+    "Imprint" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impressum"
+          }
+        }
+      }
+    },
     "Info" : {
       "localizations" : {
         "de" : {
@@ -333,6 +343,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pagrr"
+          }
+        }
+      }
+    },
+    "Privacy Policy" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzerklärung"
           }
         }
       }

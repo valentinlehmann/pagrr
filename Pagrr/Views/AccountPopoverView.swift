@@ -18,26 +18,45 @@ struct AccountPopoverView: View {
             if let user = viewModel.currentUser {
                 Text(user.email ?? "Anonymous User")
                     .bold()
-                Button {
+                Divider()
+                Button() {
+                    if let url = URL(string: "https://legal.valentinlehmann.de") {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    Image(systemName: "person.circle")
+                    Text("Imprint")
+                }
+                Button() {
+                    if let url = URL(string: "https://legal.valentinlehmann.de/privacy") {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    Image(systemName: "lock.circle")
+                    Text("Privacy Policy")
+                }
+                Divider()
+                Button() {
+                    showDeleteAccountConfirmation = true
+                } label: {
+                    Image(systemName: "trash.circle")
+                    Text("Delete Account")
+                }
+                .foregroundStyle(.red)
+                .sheet(isPresented: $showDeleteAccountConfirmation) {
+                    AccountDeletionView()
+                }
+                Button() {
                     do {
                         try AuthService.shared.signOut()
                     } catch {
                         print("Error signing out: \(error.localizedDescription)")
                     }
                 } label: {
+                    Image(systemName: "arrow.right.circle")
                     Text("Sign Out")
-                        .padding(.horizontal, 70)
                 }
-                .buttonStyle(.glass)
-                .controlSize(.large)
                 .foregroundStyle(.red)
-                .frame(maxWidth: .infinity)
-                Button("Delete Account") {
-                    showDeleteAccountConfirmation = true
-                }
-                .sheet(isPresented: $showDeleteAccountConfirmation) {
-                    AccountDeletionView()
-                }
             } else {
                 Text("No user logged in")
             }
