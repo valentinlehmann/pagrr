@@ -34,7 +34,14 @@ struct ChannelListView: View {
                             }
                         }
                     }
-                    if viewModel.channels.isEmpty {
+                    if viewModel.isLoading {
+                        VStack(alignment: .center, spacing: 8) {
+                            ProgressView()
+                            Text("Loading channels...")
+                                .foregroundColor(.gray)
+                        }
+                        .frame(maxWidth: .infinity)
+                    } else if viewModel.channels.isEmpty {
                         Text("No channels available. \nCreate one by tapping the button in the bottom right corner.", comment: "Indicates that there are no channels")
                             .foregroundColor(.gray)
                     }

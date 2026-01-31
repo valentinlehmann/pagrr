@@ -14,11 +14,15 @@ import FirebaseFirestore
 class ChannelListViewModel {
     var channels: [Channel] = []
     var isShowingAccountPopover = false
+    var isLoading = false
     
     func fetchChannels() {
+        isLoading = true;
+        
         DatabaseService.shared.fetchChannels { channels in
             Task { @MainActor in
                 self.channels = channels.sorted { $0.name < $1.name }
+                self.isLoading = false;
             }
         }
     }
