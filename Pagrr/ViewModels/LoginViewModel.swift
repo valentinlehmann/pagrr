@@ -9,7 +9,7 @@ import FirebaseAuth
 import CryptoKit
 import AuthenticationServices
 
-class LoginViewController: NSObject, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
+class LoginViewModel: NSObject, ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         #if os(iOS)
         return ASPresentationAnchor(windowScene: UIApplication.shared.connectedScenes.first as! UIWindowScene)

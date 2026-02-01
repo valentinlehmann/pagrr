@@ -9,7 +9,7 @@ import SwiftUI
 import _AuthenticationServices_SwiftUI
 
 struct LoginView: View {
-    @State private var viewModel = LoginViewController()
+    @State private var viewModel = LoginViewModel()
     
     var body: some View {
         List {
