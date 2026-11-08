@@ -2,7 +2,7 @@ name: Pagrr
 packages:
   Firebase:
     url: https://github.com/firebase/firebase-ios-sdk
-    from: 12.7.0
+    from: 13.1.1
 
 settings:
   DEVELOPMENT_TEAM: 68BLC88PQ9
