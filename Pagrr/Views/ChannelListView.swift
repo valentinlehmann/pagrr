@@ -53,6 +53,14 @@ struct ChannelListView: View {
             .refreshable {
                 viewModel.fetchChannels()
             }
+            .onChange(of: MessagingService.shared.openChannelId, initial: true) { _, id in
+                guard let id else { return }
+                MessagingService.shared.openChannelId = nil
+                viewModel.openChannel(id: id)
+            }
+            .navigationDestination(item: $viewModel.notificationChannel) { channel in
+                ChannelDetailView(channel: channel)
+            }
             .navigationTitle("Pagrr")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

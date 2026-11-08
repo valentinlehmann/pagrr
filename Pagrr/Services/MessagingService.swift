@@ -9,9 +9,13 @@ import FirebaseMessaging
 import FirebaseAuth
 internal import FirebaseFirestoreInternal
 
+@Observable
 class MessagingService: NSObject, MessagingDelegate, UNUserNotificationCenterDelegate {
     static let shared = MessagingService()
-    
+
+    /// Channel from a tapped notification, consumed by ChannelListView.
+    var openChannelId: String?
+
     func configure() {
         Messaging.messaging().delegate = self
         Messaging.messaging().isAutoInitEnabled = true
@@ -64,6 +68,7 @@ class MessagingService: NSObject, MessagingDelegate, UNUserNotificationCenterDel
     }
     
     // Receive displayed notifications for iOS 10+ devices.
+    @MainActor
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification) async
     -> UNNotificationPresentationOptions {
@@ -94,14 +99,12 @@ class MessagingService: NSObject, MessagingDelegate, UNUserNotificationCenterDel
         return [.list, .banner, .sound]
     }
     
+    // @MainActor: the async variant otherwise completes off the main thread and UIKit crashes.
+    @MainActor
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse) async {
         let userInfo = response.notification.request.content.userInfo
-        
-        // ...
-        
-        
-        // Print full message.
-        print(userInfo)
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        openChannelId = userInfo["channelId"] as? String
     }
 }

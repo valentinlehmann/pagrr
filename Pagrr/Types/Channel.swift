@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Channel: Identifiable, Codable {
+struct Channel: Identifiable, Codable, Hashable {
     var id: String
     var name: String
     var createdAt: Date

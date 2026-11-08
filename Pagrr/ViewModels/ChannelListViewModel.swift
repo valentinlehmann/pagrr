@@ -15,7 +15,16 @@ class ChannelListViewModel {
     var channels: [Channel] = []
     var isShowingAccountPopover = false
     var isLoading = false
-    
+    var notificationChannel: Channel?
+
+    func openChannel(id: String) {
+        DatabaseService.shared.fetchChannel(channelId: id) { channel in
+            Task { @MainActor in
+                self.notificationChannel = channel
+            }
+        }
+    }
+
     func fetchChannels() {
         isLoading = true;
         
